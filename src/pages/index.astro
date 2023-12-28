@@ -1,125 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Form from '../components/Form.astro';
 ---
 
-<Layout title="Form">
-	<main>
-		<div class="register">
-			<h1>REGISTER</h1>
-			<form action="register">
-				<label for="name" id="nameholder">Name</label>
-            <input type="text" id="name" name="name">
-            <br>
-            <div class="epass">
-                <label for="email" id="emailholder">Email</label>
-                <a id="password" href="#">Forgot password?</a>
-            </div>
-            <input type="email" id="email" name="email">
-            <br>
-            <input type="submit" class="submit" value="Submit">
-            <div class="member">
-                <span class="bspan">Not a member?</span> <a href="#"class="stspan">Start a 14 day free trial</a>
 
-			</form>
-		</div>
+<Layout title="main">
+	<main>
+    <Form/>
 	</main>
 		
 </Layout>
 
-<style>
-.register{
-	margin: auto;
-	width: 500px;
-	height: 500px;
-	inset: 0;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	background-color: azure;
-	text-align: center;
-	border-radius: 20px;
-}
 
-h1 {
-	font-size: 40px;
-}
 
-#name {
-    border: 1px solid #ababab;
-    width: 400px;
-    height: 34px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    opacity: 70%;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-}
 
-#name:focus{
-    outline: none;
-    box-shadow: inset 0 0 0 2px #6610f2;
-}
-
-#email:focus{
-    outline: none;
-    box-shadow: inset 0 0 0 2px #6610f2;
-	font-size: 12px;
-}
-
-::placeholder {
-    color: #cbd5e0; /* Equivalent to "text-gray-400" */
-	font-size: 12px;
-}
-
-#nameholder {
-    font-weight: 550;
-    margin-right: 370px;
-    margin-bottom: 10px;
-}
-
-.epass{
-    flex-flow: row nowrap; 
-}
-
-#email {
-    border: 1px solid #ababab;
-    width: 400px;
-    height: 34px;
-    border-radius: 6px;
-    opacity: 70%;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-}
-
-#emailholder {
-    font-weight: 550;
-    margin-right: 230px;
-    margin-bottom: 10px;
-	font-size: 16px;
-}
-
-#password{
-    font-weight: 600;
-    color: #4F46E5;
-}
-
-#password:hover{
-    color: #635ce3;
-}
-
-.submit{
-    cursor: pointer;
-    justify-content: center;
-    margin: 5px;
-    width: 410px;
-    height: 35px;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
-    border: 0px;
-    transition: border-radius 0.3s ease; 
-    background-color: #4F46E5;
-    color: white; 
-    margin-top: 10px;
-}
-	
-</style>
